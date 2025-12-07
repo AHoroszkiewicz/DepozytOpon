@@ -41,16 +41,16 @@ namespace DepozytOpon.Controllers
                 // przypisanie daty
                 depozyt.DataPrzyjecia = DateTime.Now;
 
-                // Pobranie obiektu Opona z bazy
-                var opona = await _context.Opony.FindAsync(depozyt.OponaId);
-                if (opona == null)
-                {
-                    ModelState.AddModelError("OponaId", "Wybrana opona nie istnieje.");
-                    ViewBag.Opony = new SelectList(_context.Opony, "Id", "KodTowaru");
-                    return View(depozyt);
-                }
+                //// Pobranie obiektu Opona z bazy
+                //var opona = await _context.Opony.FindAsync(depozyt.OponaId);
+                //if (opona == null)
+                //{
+                //    ModelState.AddModelError("OponaId", "Wybrana opona nie istnieje.");
+                //    ViewBag.Opony = new SelectList(_context.Opony, "Id", "KodTowaru");
+                //    return View(depozyt);
+                //}
 
-                depozyt.Opona = opona;
+                //depozyt.Opona = opona;
 
                 // Dodanie depozytu
                 _context.Depozyty.Add(depozyt);

@@ -1,78 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Projekty\\DepozytOpon\\",
+  "WorkspaceRootPath": "C:\\Dane\\Repozytoria\\DepozytOpon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\controllers\\depozytycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\controllers\\depozytycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\depozytycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\depozyty\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\depozyty\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\models\\depozytopon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\models\\depozytopon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:models\\depozytopon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\depozyty\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Dane\\Repozytoria\\DepozytOpon\\Data\\Migrations\\20251207145806_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\20251207145806_test1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\depozyty\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\depozyty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\depozyty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\models\\opona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\models\\opona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:models\\opona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\opony\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\home\\depozyt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\home\\depozyt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\home\\depozyt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\depozyty\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|c:\\dane\\repozytoria\\depozytopon\\views\\depozyty\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\depozyty\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,77 +86,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dodaj.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Dodaj.cshtml",
-              "RelativeDocumentMoniker": "Views\\Depozyty\\Dodaj.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Dodaj.cshtml",
-              "RelativeToolTip": "Views\\Depozyty\\Dodaj.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T14:24:52.467Z",
+              "DocumentIndex": 3,
+              "Title": "20251207145806_test1.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Data\\Migrations\\20251207145806_test1.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20251207145806_test1.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Data\\Migrations\\20251207145806_test1.cs",
+              "RelativeToolTip": "Data\\Migrations\\20251207145806_test1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T14:58:06.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepozytOpon.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Models\\DepozytOpon.cs",
+              "RelativeDocumentMoniker": "Models\\DepozytOpon.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Models\\DepozytOpon.cs",
+              "RelativeToolTip": "Models\\DepozytOpon.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T14:50:23.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DepozytyController.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Controllers\\DepozytyController.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\DepozytyController.cs",
               "RelativeDocumentMoniker": "Controllers\\DepozytyController.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Controllers\\DepozytyController.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\DepozytyController.cs",
               "RelativeToolTip": "Controllers\\DepozytyController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAywCEAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBsAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T14:18:23.101Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "Usun.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
               "RelativeDocumentMoniker": "Views\\Opony\\Usun.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
               "RelativeToolTip": "Views\\Opony\\Usun.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T13:54:40.361Z"
+              "WhenOpened": "2025-12-07T13:54:40.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Edytuj.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
-              "RelativeDocumentMoniker": "Views\\Opony\\Edytuj.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
-              "RelativeToolTip": "Views\\Opony\\Edytuj.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T13:54:25.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "Dodaj.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
               "RelativeDocumentMoniker": "Views\\Opony\\Dodaj.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
               "RelativeToolTip": "Views\\Opony\\Dodaj.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T13:54:08.673Z"
+              "WhenOpened": "2025-12-07T13:54:08.673Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Index.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -160,11 +191,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Opona.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Models\\Opona.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Models\\Opona.cs",
               "RelativeDocumentMoniker": "Models\\Opona.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Models\\Opona.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Models\\Opona.cs",
               "RelativeToolTip": "Models\\Opona.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -173,13 +204,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
+              "Title": "Dodaj.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Dodaj.cshtml",
+              "RelativeDocumentMoniker": "Views\\Depozyty\\Dodaj.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Dodaj.cshtml",
+              "RelativeToolTip": "Views\\Depozyty\\Dodaj.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T14:24:52.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edytuj.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
+              "RelativeDocumentMoniker": "Views\\Opony\\Edytuj.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
+              "RelativeToolTip": "Views\\Opony\\Edytuj.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:54:25.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Depozyty\\Index.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Index.cshtml",
+              "RelativeToolTip": "Views\\Depozyty\\Index.cshtml",
+              "ViewState": "AgIAACAAAAAAAAAAAAAiwCEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T14:19:23.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Data\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-07T13:44:39.92Z",
               "EditorCaption": ""
@@ -188,9 +257,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "OponyController.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Controllers\\OponyController.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\OponyController.cs",
               "RelativeDocumentMoniker": "Controllers\\OponyController.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Controllers\\OponyController.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\OponyController.cs",
               "RelativeToolTip": "Controllers\\OponyController.cs",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAFoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -198,24 +267,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Program.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Program.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T13:41:24.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T13:41:24.398Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -223,11 +291,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 14,
               "Title": "Depozyt.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Depozyt.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
               "RelativeToolTip": "Views\\Home\\Depozyt.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -235,11 +303,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Index.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Opony\\Index.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Index.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Opony\\Index.cshtml",
               "RelativeToolTip": "Views\\Opony\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -247,89 +315,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
               "Title": "_Layout.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxwAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T13:32:43.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T13:32:43.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 17,
               "Title": "Edytuj.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Edytuj.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Edytuj.cshtml",
               "RelativeDocumentMoniker": "Views\\Depozyty\\Edytuj.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Edytuj.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Edytuj.cshtml",
               "RelativeToolTip": "Views\\Depozyty\\Edytuj.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T14:25:12.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:25:12.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 18,
               "Title": "Usun.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Usun.cshtml",
+              "DocumentMoniker": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Usun.cshtml",
               "RelativeDocumentMoniker": "Views\\Depozyty\\Usun.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Usun.cshtml",
+              "ToolTip": "C:\\Dane\\Repozytoria\\DepozytOpon\\Views\\Depozyty\\Usun.cshtml",
               "RelativeToolTip": "Views\\Depozyty\\Usun.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T14:25:34.228Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Depozyty\\Index.cshtml",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Depozyty\\Index.cshtml",
-              "RelativeToolTip": "Views\\Depozyty\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-07T14:19:23.561Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "2b464f7c-5e29-49b5-b46c-3ae440f279dc",
-        "Display": 1,
-        "X": -5,
-        "Y": 112,
-        "Width": 2207,
-        "Height": 1128,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DepozytOpon.cs",
-              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Models\\DepozytOpon.cs",
-              "RelativeDocumentMoniker": "Models\\DepozytOpon.cs",
-              "ToolTip": "E:\\Projekty\\DepozytOpon\\Models\\DepozytOpon.cs",
-              "RelativeToolTip": "Models\\DepozytOpon.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-07T14:04:30.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-07T14:25:34.228Z"
             }
           ]
         }

@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DepozytOpon")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca331125fc1f6d636adc6ce6260199a913dc6d2b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8e92b6827e016e46a5b96f97ce0877ca3c66ad4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DepozytOpon")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DepozytOpon")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

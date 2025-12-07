@@ -15,8 +15,7 @@ namespace DepozytOpon.Models
 
         // Lista opon powiązana z depozytem (nawet jeśli zwykle jest 1 typ opony,
         // to liczbę sztuk trzymamy w polu Ilość)
-        public int OponaId { get; set; }
-        public Opona Opona { get; set; }
+        public string OponaId { get; set; }
 
         public int Ilosc { get; set; }
         public DateTime DataPrzyjecia { get; set; }
