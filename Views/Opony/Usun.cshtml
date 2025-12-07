@@ -1,0 +1,21 @@
+﻿@model DepozytOpon.Models.Opona
+
+<h2>Usuń oponę</h2>
+
+<p>Czy na pewno chcesz usunąć tę oponę?</p>
+
+<ul>
+    <li><strong>Typ:</strong> @Model.Typ</li>
+    <li><strong>Producent:</strong> @Model.Producent</li>
+    <li><strong>Rozmiar:</strong> @Model.Rozmiar</li>
+    <li><strong>Bieżnik:</strong> @Model.Bieżnik</li>
+    <li><strong>Sezon:</strong> @Model.Sezon</li>
+    <li><strong>Rok produkcji:</strong> @Model.RokProdukcji</li>
+    <li><strong>Kod:</strong> @Model.KodTowaru</li>
+</ul>
+
+<form method="post" asp-action="UsunPotwierdzenie">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger">Usuń</button>
+    <a class="btn btn-secondary" href="/Opony/ListaOpon">Anuluj</a>
+</form>

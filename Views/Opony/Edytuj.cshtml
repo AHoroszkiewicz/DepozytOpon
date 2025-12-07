@@ -1,0 +1,44 @@
+﻿@model DepozytOpon.Models.Opona
+
+<h2>Edytuj oponę</h2>
+
+<form asp-action="Edytuj" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label>Typ</label>
+        <input class="form-control" asp-for="Typ" />
+    </div>
+
+    <div class="form-group">
+        <label>Producent</label>
+        <input class="form-control" asp-for="Producent" />
+    </div>
+
+    <div class="form-group">
+        <label>Rozmiar</label>
+        <input class="form-control" asp-for="Rozmiar" />
+    </div>
+
+    <div class="form-group">
+        <label>Bieżnik</label>
+        <input class="form-control" asp-for="Bieżnik" />
+    </div>
+
+    <div class="form-group">
+        <label>Sezon</label>
+        <input class="form-control" asp-for="Sezon" />
+    </div>
+
+    <div class="form-group">
+        <label>Rok produkcji</label>
+        <input class="form-control" asp-for="RokProdukcji" />
+    </div>
+
+    <div class="form-group">
+        <label>Kod towaru</label>
+        <input class="form-control" asp-for="KodTowaru" />
+    </div>
+
+    <button type="submit" class="btn btn-success mt-3">Zapisz zmiany</button>
+</form>

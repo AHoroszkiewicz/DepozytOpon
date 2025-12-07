@@ -24,12 +24,28 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Projekty/DepozytOpon/Views/Home/Depozyt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXBvenl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Projekty/DepozytOpon/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/Projekty/DepozytOpon/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[E:/Projekty/DepozytOpon/Views/Opony/Dodaj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BvbnlcRG9kYWouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Opony/Edytuj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BvbnlcRWR5dHVqLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Opony/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BvbnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Opony/Usun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3BvbnlcVXN1bi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Projekty/DepozytOpon/Views/Shared/Error.cshtml]

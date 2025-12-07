@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DepozytOpon.Models.Opona>
+
+<h2>Lista opon</h2>
+
+<a class="btn btn-primary mb-3" href="/Opony/Dodaj">Dodaj nową oponę</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Typ</th>
+            <th>Producent</th>
+            <th>Rozmiar</th>
+            <th>Bieżnik</th>
+            <th>Sezon</th>
+            <th>Rok produkcji</th>
+            <th>Kod towaru</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var o in Model)
+        {
+            <tr>
+                <td>@o.Typ</td>
+                <td>@o.Producent</td>
+                <td>@o.Rozmiar</td>
+                <td>@o.Bieżnik</td>
+                <td>@o.Sezon</td>
+                <td>@o.RokProdukcji</td>
+                <td>@o.KodTowaru</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" href="/Opony/Edytuj/@o.Id">Edytuj</a>
+                    <a class="btn btn-sm btn-danger" href="/Opony/Usun/@o.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

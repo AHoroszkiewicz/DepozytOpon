@@ -18,7 +18,12 @@ namespace DepozytOpon.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ListaOpon()
+        {
+            return View();
+        }
+
+        public IActionResult Depozyt()
         {
             return View();
         }

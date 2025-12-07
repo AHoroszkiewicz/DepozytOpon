@@ -9,5 +9,6 @@ namespace DepozytOpon.Data
             : base(options)
         {
         }
+        public DbSet<DepozytOpon.Models.Opona> Opony { get; set; }
     }
 }

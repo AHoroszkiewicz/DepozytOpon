@@ -1,12 +1,245 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Projekty\\DepozytOpon\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\usun.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\models\\opona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:models\\opona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\oponycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\edytuj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\opony\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\opony\\dodaj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|e:\\projekty\\depozytopon\\views\\home\\depozyt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0B284B12-E55F-4A1C-9911-FFDD61BA2506}|DepozytOpon.csproj|solutionrelative:views\\home\\depozyt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Usun.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
+              "RelativeDocumentMoniker": "Views\\Opony\\Usun.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Usun.cshtml",
+              "RelativeToolTip": "Views\\Opony\\Usun.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:54:40.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edytuj.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
+              "RelativeDocumentMoniker": "Views\\Opony\\Edytuj.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Edytuj.cshtml",
+              "RelativeToolTip": "Views\\Opony\\Edytuj.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:54:25.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Dodaj.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
+              "RelativeDocumentMoniker": "Views\\Opony\\Dodaj.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Dodaj.cshtml",
+              "RelativeToolTip": "Views\\Opony\\Dodaj.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:54:08.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:46:36.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:44:39.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OponyController.cs",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Controllers\\OponyController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OponyController.cs",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Controllers\\OponyController.cs",
+              "RelativeToolTip": "Controllers\\OponyController.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:43:01.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:41:24.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:35:09.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Depozyt.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Depozyt.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Home\\Depozyt.cshtml",
+              "RelativeToolTip": "Views\\Home\\Depozyt.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:34:33.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Opony\\Index.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Opony\\Index.cshtml",
+              "RelativeToolTip": "Views\\Opony\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:33:41.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxkAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-07T13:32:43.169Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "a96648e4-7b1b-4898-8f8c-648f0fc41323",
+        "Display": 1,
+        "X": -5,
+        "Y": 269,
+        "Width": 2207,
+        "Height": 1128,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Opona.cs",
+              "DocumentMoniker": "E:\\Projekty\\DepozytOpon\\Models\\Opona.cs",
+              "RelativeDocumentMoniker": "Models\\Opona.cs",
+              "ToolTip": "E:\\Projekty\\DepozytOpon\\Models\\Opona.cs",
+              "RelativeToolTip": "Models\\Opona.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T13:37:00.28Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
