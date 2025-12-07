@@ -4,7 +4,8 @@
 
 <p>Czy na pewno chcesz usunąć BOX <strong>@Model.NumerBOX</strong>?</p>
 
-<form method="post">
+<form method="post" asp-action="UsunPotwierdzenie">
+    <input type="hidden" asp-for="Id" />
     <button class="btn btn-danger">Usuń</button>
     <a class="btn btn-secondary" href="/Depozyt">Anuluj</a>
 </form>

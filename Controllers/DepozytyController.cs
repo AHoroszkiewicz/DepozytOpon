@@ -27,7 +27,7 @@ namespace DepozytOpon.Controllers
         // GET
         public IActionResult Dodaj()
         {
-            ViewBag.Opony = new SelectList(_context.Opony, "Id", "KodTowaru");
+            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru");
             return View();
         }
 
@@ -60,7 +60,7 @@ namespace DepozytOpon.Controllers
             }
 
             // jeśli ModelState nie jest valid
-            ViewBag.Opony = new SelectList(_context.Opony, "Id", "KodTowaru", depozyt.OponaId);
+            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
             return View(depozyt);
         }
 
@@ -72,6 +72,7 @@ namespace DepozytOpon.Controllers
             if (depozyt == null)
                 return NotFound();
 
+            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
             return View(depozyt);
         }
 
@@ -87,6 +88,7 @@ namespace DepozytOpon.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
             return View(depozyt);
         }
 

@@ -33,9 +33,16 @@
     <div class="mb-3">
         <label>Opona</label>
         <select class="form-control" name="OponaId">
-            @foreach (var o in ViewBag.Opony as SelectList)
+            @if (ViewBag.Opony != null)
             {
-                <option value="@o.Value" selected="@(o.Value == Model.OponaId.ToString())">@o.Text</option>
+                @foreach (var o in (SelectList)ViewBag.Opony)
+                {
+                    <option value="@o.Value">@o.Text</option>
+                }
+            }
+            else
+            {
+                <option disabled>Brak opon w bazie</option>
             }
         </select>
     </div>

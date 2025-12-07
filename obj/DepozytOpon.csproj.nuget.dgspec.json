@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dane\\Repozytoria\\DepozytOpon\\DepozytOpon.csproj": {}
+    "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj": {}
   },
   "projects": {
-    "C:\\Dane\\Repozytoria\\DepozytOpon\\DepozytOpon.csproj": {
+    "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dane\\Repozytoria\\DepozytOpon\\DepozytOpon.csproj",
+        "projectUniqueName": "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj",
         "projectName": "DepozytOpon",
-        "projectPath": "C:\\Dane\\Repozytoria\\DepozytOpon\\DepozytOpon.csproj",
-        "packagesPath": "C:\\Users\\shaqi\\.nuget\\packages\\",
-        "outputPath": "C:\\Dane\\Repozytoria\\DepozytOpon\\obj\\",
+        "projectPath": "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj",
+        "packagesPath": "C:\\Users\\login\\.nuget\\packages\\",
+        "outputPath": "E:\\Projekty\\DepozytOpon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\shaqi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\login\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
