@@ -1,0 +1,54 @@
+﻿@model DepozytOpon.Models.Depozyt
+
+<h2>Edytuj depozyt</h2>
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+    <div class="mb-3">
+        <label>Numer BOX</label>
+        <input class="form-control" name="NumerBOX" value="@Model.NumerBOX" />
+    </div>
+
+    <div class="mb-3">
+        <label>Imię i nazwisko</label>
+        <input class="form-control" name="ImieNazwisko" value="@Model.ImieNazwisko" />
+    </div>
+
+    <div class="mb-3">
+        <label>Numer telefonu</label>
+        <input class="form-control" name="NumerTelefonu" value="@Model.NumerTelefonu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Marka pojazdu</label>
+        <input class="form-control" name="MarkaPojazdu" value="@Model.MarkaPojazdu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Rejestracja pojazdu</label>
+        <input class="form-control" name="RejestracjaPojazdu" value="@Model.RejestracjaPojazdu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Opona</label>
+        <select class="form-control" name="OponaId">
+            @foreach (var o in ViewBag.Opony as SelectList)
+            {
+                <option value="@o.Value" selected="@(o.Value == Model.OponaId.ToString())">@o.Text</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Ilość</label>
+        <input type="number" class="form-control" name="Ilosc" value="@Model.Ilosc" />
+    </div>
+
+    <div class="mb-3">
+        <label>Notatka</label>
+        <textarea class="form-control" name="Notatka">@Model.Notatka</textarea>
+    </div>
+
+    <button class="btn btn-success">Zapisz</button>
+</form>

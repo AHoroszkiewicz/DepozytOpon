@@ -24,6 +24,22 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Projekty/DepozytOpon/Views/Depozyty/Dodaj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3p5dHlcRG9kYWouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Depozyty/Edytuj.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3p5dHlcRWR5dHVqLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Depozyty/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3p5dHlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projekty/DepozytOpon/Views/Depozyty/Usun.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwb3p5dHlcVXN1bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Projekty/DepozytOpon/Views/Home/Depozyt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXBvenl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

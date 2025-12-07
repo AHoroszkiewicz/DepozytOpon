@@ -10,5 +10,6 @@ namespace DepozytOpon.Data
         {
         }
         public DbSet<DepozytOpon.Models.Opona> Opony { get; set; }
+        public DbSet<DepozytOpon.Models.Depozyt> Depozyty { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DepozytOpon.Models.Depozyt>
+
+<h2>Lista depozytów</h2>
+
+<a class="btn btn-primary mb-3" href="/Depozyty/Dodaj">Dodaj depozyt</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Numer depozytu</th>
+            <th>Numer BOX</th>
+            <th>Imię i nazwisko</th>
+            <th>Telefon</th>
+            <th>Marka Pojazdu</th>
+            <th>Rejestracja</th>
+            <th>Opony</th>
+            <th>Ilość</th>
+            <th>Data przyjęcia</th>
+            <th>Notatka</th>
+            <th>Akcje</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var d in Model)
+        {
+            <tr>
+                <td>@d.Id</td>
+                <td>@d.NumerBOX</td>
+                <td>@d.ImieNazwisko</td>
+                <td>@d.NumerTelefonu</td>
+                <td>@d.MarkaPojazdu</td>
+                <td>@d.RejestracjaPojazdu</td>
+                <td>@d.Opona?.KodTowaru</td>
+                <td>@d.Ilosc</td>
+                <td>@d.DataPrzyjecia.ToShortDateString()</td>
+                <td>@d.Notatka</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="/Depozyty/Edytuj/@d.Id">Edytuj</a>
+                    <a class="btn btn-danger btn-sm" href="/Depozyty/Usun/@d.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

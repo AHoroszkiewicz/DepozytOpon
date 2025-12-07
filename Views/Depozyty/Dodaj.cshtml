@@ -1,0 +1,59 @@
+﻿@model DepozytOpon.Models.Depozyt
+
+<h2>Dodaj depozyt</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label>Numer BOX</label>
+        <input class="form-control" name="NumerBOX" />
+    </div>
+
+    <div class="mb-3">
+        <label>Imię i nazwisko</label>
+        <input class="form-control" name="ImieNazwisko" />
+    </div>
+
+    <div class="mb-3">
+        <label>Numer telefonu</label>
+        <input class="form-control" name="NumerTelefonu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Marka pojazdu</label>
+        <input class="form-control" name="MarkaPojazdu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Rejestracja pojazdu</label>
+        <input class="form-control" name="RejestracjaPojazdu" />
+    </div>
+
+    <div class="mb-3">
+        <label>Opona</label>
+        <select class="form-control" name="OponaId">
+            @if (ViewBag.Opony != null)
+            {
+                @foreach (var o in (SelectList)ViewBag.Opony)
+                {
+                    <option value="@o.Value">@o.Text</option>
+                }
+            }
+            else
+            {
+                <option disabled>Brak opon w bazie</option>
+            }
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Ilość</label>
+        <input type="number" class="form-control" name="Ilosc" />
+    </div>
+
+    <div class="mb-3">
+        <label>Notatka</label>
+        <textarea class="form-control" name="Notatka"></textarea>
+    </div>
+
+    <button class="btn btn-success">Zapisz</button>
+</form>
