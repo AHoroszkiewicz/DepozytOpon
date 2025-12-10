@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj": {}
+    "C:\\Users\\Jakub Matuszak\\Source\\Repos\\DepozytOpon\\DepozytOpon.csproj": {}
   },
   "projects": {
-    "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj": {
+    "C:\\Users\\Jakub Matuszak\\Source\\Repos\\DepozytOpon\\DepozytOpon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj",
+        "projectUniqueName": "C:\\Users\\Jakub Matuszak\\Source\\Repos\\DepozytOpon\\DepozytOpon.csproj",
         "projectName": "DepozytOpon",
-        "projectPath": "E:\\Projekty\\DepozytOpon\\DepozytOpon.csproj",
-        "packagesPath": "C:\\Users\\login\\.nuget\\packages\\",
-        "outputPath": "E:\\Projekty\\DepozytOpon\\obj\\",
+        "projectPath": "C:\\Users\\Jakub Matuszak\\Source\\Repos\\DepozytOpon\\DepozytOpon.csproj",
+        "packagesPath": "C:\\Users\\Jakub Matuszak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jakub Matuszak\\Source\\Repos\\DepozytOpon\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\login\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jakub Matuszak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,8 +43,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -70,6 +68,10 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.22, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.7.0, )"
             }
           },
           "imports": [
@@ -91,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

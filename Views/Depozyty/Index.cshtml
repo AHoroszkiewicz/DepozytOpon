@@ -9,6 +9,7 @@
         <tr>
             <th>Numer depozytu</th>
             <th>Numer BOX</th>
+            <th>Kod QR</th>
             <th>Imię i nazwisko</th>
             <th>Telefon</th>
             <th>Marka Pojazdu</th>
@@ -27,6 +28,13 @@
             <tr>
                 <td>@d.Id</td>
                 <td>@d.NumerBOX</td>
+
+                <td class="text-center">
+                    <img src="@Url.Action("GenerujQR", "Depozyty", new { id = d.Id })"
+                         alt="QR Code"
+                         style="width: 80px; height: 80px;" />
+                </td>
+
                 <td>@d.ImieNazwisko</td>
                 <td>@d.NumerTelefonu</td>
                 <td>@d.MarkaPojazdu</td>
@@ -38,6 +46,7 @@
                 <td>
                     <a class="btn btn-warning btn-sm" href="/Depozyty/Edytuj/@d.Id">Edytuj</a>
                     <a class="btn btn-danger btn-sm" href="/Depozyty/Usun/@d.Id">Usuń</a>
+
                 </td>
             </tr>
         }
