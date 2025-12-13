@@ -77,7 +77,7 @@ namespace DepozytOpon.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bieżnik")
+                    b.Property<string>("Bieznik")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

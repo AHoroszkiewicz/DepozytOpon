@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DepozytOpon.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251207141745_depozyt")]
-    partial class Depozyt
+    [Migration("20251210215504_zmiana nazwy bieżnika")]
+    partial class zmiananazwybieżnika
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,16 +59,15 @@ namespace DepozytOpon.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OponaId")
-                        .HasColumnType("int");
+                    b.Property<string>("OponaId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RejestracjaPojazdu")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("OponaId");
 
                     b.ToTable("Depozyty");
                 });
@@ -81,7 +80,7 @@ namespace DepozytOpon.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bieżnik")
+                    b.Property<string>("Bieznik")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -314,17 +313,6 @@ namespace DepozytOpon.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("DepozytOpon.Models.Depozyt", b =>
-                {
-                    b.HasOne("DepozytOpon.Models.Opona", "Opona")
-                        .WithMany()
-                        .HasForeignKey("OponaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Opona");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
