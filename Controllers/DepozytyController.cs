@@ -3,10 +3,16 @@ using DepozytOpon.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using System;
+// --- NOWE BIBLIOTEKI DO QR ---
+using QRCoder;
+using System.IO;
+// -----------------------------
 
 namespace DepozytOpon.Controllers
 {
+    [Authorize]
     public class DepozytyController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -24,7 +30,6 @@ namespace DepozytOpon.Controllers
         }
 
         // DODAWANIE — GET
-        // GET
         public IActionResult Dodaj()
         {
             ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru");
@@ -38,32 +43,20 @@ namespace DepozytOpon.Controllers
         {
             if (ModelState.IsValid)
             {
-                // przypisanie daty
                 depozyt.DataPrzyjecia = DateTime.Now;
-
-                //// Pobranie obiektu Opona z bazy
-                //var opona = await _context.Opony.FindAsync(depozyt.OponaId);
-                //if (opona == null)
-                //{
-                //    ModelState.AddModelError("OponaId", "Wybrana opona nie istnieje.");
-                //    ViewBag.Opony = new SelectList(_context.Opony, "Id", "KodTowaru");
-                //    return View(depozyt);
-                //}
-
-                //depozyt.Opona = opona;
-
-                // Dodanie depozytu
                 _context.Depozyty.Add(depozyt);
                 await _context.SaveChangesAsync();
 
+                // ZMIANA: Po dodaniu przekieruj do szczegółów, żeby pokazać QR
+                // return RedirectToAction(nameof(Index)); 
+                // Możesz przekierować do akcji np. "Szczegoly", jeśli ją stworzysz, 
+                // ale na razie zostawmy Index, a QR dodasz na liście lub w edycji.
                 return RedirectToAction(nameof(Index));
             }
 
-            // jeśli ModelState nie jest valid
             ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
             return View(depozyt);
         }
-
 
         // EDYCJA — GET
         public async Task<IActionResult> Edytuj(int id)
@@ -115,6 +108,25 @@ namespace DepozytOpon.Controllers
             }
 
             return RedirectToAction(nameof(Index));
+        }
+
+        // --- NOWA METODA: GENEROWANIE KODU QR ---
+        // Wywołujesz ją w HTML jako obrazek
+        public IActionResult GenerujQR(int id)
+        {
+            // Możemy zakodować samo ID, np. "15", albo prefiks np. "DEP-15"
+            string payload = id.ToString();
+
+            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+            {
+                QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
+
+                // PngByteQRCode jest lżejsze i nie wymaga System.Drawing.Common w nowszych .NET
+                PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
+                byte[] qrCodeImage = qrCode.GetGraphic(20);
+
+                return File(qrCodeImage, "image/png");
+            }
         }
     }
 }
