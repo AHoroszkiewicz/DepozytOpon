@@ -13,7 +13,7 @@ namespace DepozytOpon.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20251207141745_depozyt")]
-    partial class Depozyt
+    partial class depozyt
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

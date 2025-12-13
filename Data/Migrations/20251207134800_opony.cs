@@ -5,7 +5,7 @@
 namespace DepozytOpon.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Opony : Migration
+    public partial class opony : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

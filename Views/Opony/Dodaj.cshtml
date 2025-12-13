@@ -1,9 +1,7 @@
 ﻿@model DepozytOpon.Models.Opona
 
 <h2>Dodaj oponę</h2>
-<button class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#scrapeModal">
-    Pobierz z linku
-</button>
+
 <form asp-action="Dodaj" method="post">
     <div class="form-group">
         <label>Typ</label>
@@ -22,7 +20,7 @@
 
     <div class="form-group">
         <label>Bieżnik</label>
-        <input class="form-control" asp-for="Bieznik" />
+        <input class="form-control" asp-for="Bieżnik" />
     </div>
 
     <div class="form-group">
@@ -42,57 +40,3 @@
 
     <button type="submit" class="btn btn-primary mt-3">Zapisz</button>
 </form>
-<div class="modal fade" id="scrapeModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <h5 class="modal-title">Pobierz dane opony z linku</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-
-            <div class="modal-body">
-                <input id="scrapeUrl" class="form-control" placeholder="Wklej link do opony">
-            </div>
-
-            <div class="modal-footer">
-                <button class="btn btn-primary" onclick="scrape()">Generuj</button>
-            </div>
-
-        </div>
-    </div>
-</div>
-<script>
-    function scrape() {
-        let url = document.getElementById("scrapeUrl").value;
-
-        fetch("/Scraper/Scrape", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: "url=" + encodeURIComponent(url)
-        })
-        .then(r => r.json())
-        .then(d => {
-            if (!d.success) {
-                alert("Błąd scrapowania:\n" + d.error);
-                return;
-            }
-
-            let o = d.data;
-
-            // przypisanie wartości do formularza
-                document.getElementById("Typ").value = o.typ ?? "";
-                document.getElementById("Producent").value = o.producent ?? "";
-                document.getElementById("Rozmiar").value = o.rozmiar ?? "";
-                document.getElementById("Bieznik").value = o.bieznik ?? "";
-                document.getElementById("Sezon").value = o.sezon ?? "";
-                document.getElementById("RokProdukcji").value = o.rokProdukcji ?? "";
-                document.getElementById("KodTowaru").value = o.kodTowaru ?? "";
-            
-            // zamknij modal
-            var modal = bootstrap.Modal.getInstance(document.getElementById("scrapeModal"));
-            modal.hide();
-        });
-    }
-</script>
-

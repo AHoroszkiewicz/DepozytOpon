@@ -13,7 +13,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.22" />
-    <PackageReference Include="Microsoft.Playwright" Version="1.57.0" />
   </ItemGroup>
 
 </Project>
