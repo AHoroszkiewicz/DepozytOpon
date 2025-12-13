@@ -3,10 +3,12 @@ using DepozytOpon.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using System;
 
 namespace DepozytOpon.Controllers
 {
+    [Authorize]
     public class DepozytyController : Controller
     {
         private readonly ApplicationDbContext _context;
