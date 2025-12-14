@@ -13,11 +13,11 @@ using System.IO;
 namespace DepozytOpon.Controllers
 {
     [Authorize]
-    public class DepozytyController : Controller
+    public class DepozytController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public DepozytyController(ApplicationDbContext context)
+        public DepozytController(ApplicationDbContext context)
         {
             _context = context;
         }
