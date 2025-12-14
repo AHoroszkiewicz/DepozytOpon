@@ -4,19 +4,16 @@ using DepozytOpon.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DepozytOpon.Data.Migrations
+namespace DepozytOpon.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251207145806_test1")]
-    partial class test1
+    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,7 +66,7 @@ namespace DepozytOpon.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Depozyty");
+                    b.ToTable("Depozyt");
                 });
 
             modelBuilder.Entity("DepozytOpon.Models.Opona", b =>
@@ -80,32 +77,25 @@ namespace DepozytOpon.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bieżnik")
-                        .IsRequired()
+                    b.Property<string>("Bieznik")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KodTowaru")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Producent")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RokProdukcji")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rozmiar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sezon")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Typ")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

@@ -4,6 +4,7 @@
 <button class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#scrapeModal">
     Pobierz z linku
 </button>
+<div id="scrapeAlert" class="alert d-none" role="alert"></div>
 <form asp-action="Dodaj" method="post">
     <div class="form-group">
         <label>Typ</label>
@@ -41,8 +42,10 @@
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Zapisz</button>
+    <a asp-action="Index" asp-controller="Opony" class="btn btn-secondary mt-3">Wstecz</a>
 </form>
 <div class="modal fade" id="scrapeModal" tabindex="-1" aria-hidden="true">
+    <div id="scrapeAlert" class="alert d-none" role="alert"></div>
     <div class="modal-dialog">
         <div class="modal-content">
 
@@ -52,19 +55,38 @@
             </div>
 
             <div class="modal-body">
-                <input id="scrapeUrl" class="form-control" placeholder="Wklej link do opony">
+                <input id="scrapeUrl" class="form-control mb-3" placeholder="Wklej link do opony">
+
+                <div id="scrapeLoader" class="text-center d-none">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <div class="mt-2">Pobieranie danych…</div>
+                </div>
             </div>
 
+
             <div class="modal-footer">
-                <button class="btn btn-primary" onclick="scrape()">Generuj</button>
+                <button id="scrapeBtn" class="btn btn-primary" onclick="scrape()">Generuj</button>
             </div>
 
         </div>
     </div>
 </div>
 <script>
+    function showAlert(type, message) {
+        const alert = document.getElementById("scrapeAlert");
+        alert.className = `alert alert-${type}`;
+        alert.innerText = message;
+        alert.classList.remove("d-none");
+    }
+
     function scrape() {
-        let url = document.getElementById("scrapeUrl").value;
+        const url = document.getElementById("scrapeUrl").value;
+        const loader = document.getElementById("scrapeLoader");
+        const btn = document.getElementById("scrapeBtn");
+
+        // UI start
+        loader.classList.remove("d-none");
+        btn.disabled = true;
 
         fetch("/Scraper/Scrape", {
             method: "POST",
@@ -74,25 +96,37 @@
         .then(r => r.json())
         .then(d => {
             if (!d.success) {
-                alert("Błąd scrapowania:\n" + d.error);
+                showAlert("danger", "❌ Błąd scrapowania: " + d.error);
                 return;
             }
 
-            let o = d.data;
+            const o = d.data;
 
-            // przypisanie wartości do formularza
-                document.getElementById("Typ").value = o.typ ?? "";
-                document.getElementById("Producent").value = o.producent ?? "";
-                document.getElementById("Rozmiar").value = o.rozmiar ?? "";
-                document.getElementById("Bieznik").value = o.bieznik ?? "";
-                document.getElementById("Sezon").value = o.sezon ?? "";
-                document.getElementById("RokProdukcji").value = o.rokProdukcji ?? "";
-                document.getElementById("KodTowaru").value = o.kodTowaru ?? "";
-            
-            // zamknij modal
-            var modal = bootstrap.Modal.getInstance(document.getElementById("scrapeModal"));
+            // Uzupełniamy TYLKO znalezione pola
+            if (o.typ) document.getElementById("Typ").value = o.typ;
+            if (o.producent) document.getElementById("Producent").value = o.producent;
+            if (o.rozmiar) document.getElementById("Rozmiar").value = o.rozmiar;
+            if (o.bieznik) document.getElementById("Bieznik").value = o.bieznik;
+            if (o.sezon) document.getElementById("Sezon").value = o.sezon;
+            if (o.rokProdukcji) document.getElementById("RokProdukcji").value = o.rokProdukcji;
+            if (o.kodTowaru) document.getElementById("KodTowaru").value = o.kodTowaru;
+
+            showAlert("success", "✅ Dane zostały pobrane poprawnie");
+
+            // Zamykamy modal
+            const modal = bootstrap.Modal.getInstance(
+                document.getElementById("scrapeModal")
+            );
             modal.hide();
+        })
+        .catch(() => {
+            showAlert("danger", "❌ Wystąpił błąd połączenia z serwerem");
+        })
+        .finally(() => {
+            loader.classList.add("d-none");
+            btn.disabled = false;
         });
     }
 </script>
+
 

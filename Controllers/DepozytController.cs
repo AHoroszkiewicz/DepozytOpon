@@ -25,7 +25,7 @@ namespace DepozytOpon.Controllers
         // LISTA
         public async Task<IActionResult> Index()
         {
-            var lista = await _context.Depozyty.ToListAsync();
+            var lista = await _context.Depozyt.ToListAsync();
             return View(lista);
         }
 
@@ -44,7 +44,7 @@ namespace DepozytOpon.Controllers
             if (ModelState.IsValid)
             {
                 depozyt.DataPrzyjecia = DateTime.Now;
-                _context.Depozyty.Add(depozyt);
+                _context.Depozyt.Add(depozyt);
                 await _context.SaveChangesAsync();
 
                 // ZMIANA: Po dodaniu przekieruj do szczegółów, żeby pokazać QR
@@ -61,7 +61,7 @@ namespace DepozytOpon.Controllers
         // EDYCJA — GET
         public async Task<IActionResult> Edytuj(int id)
         {
-            var depozyt = await _context.Depozyty.FindAsync(id);
+            var depozyt = await _context.Depozyt.FindAsync(id);
             if (depozyt == null)
                 return NotFound();
 
@@ -88,7 +88,7 @@ namespace DepozytOpon.Controllers
         // USUWANIE — GET
         public async Task<IActionResult> Usun(int id)
         {
-            var depozyt = await _context.Depozyty.FindAsync(id);
+            var depozyt = await _context.Depozyt.FindAsync(id);
             if (depozyt == null)
                 return NotFound();
 
@@ -100,10 +100,10 @@ namespace DepozytOpon.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UsunPotwierdzony(int id)
         {
-            var depozyt = await _context.Depozyty.FindAsync(id);
+            var depozyt = await _context.Depozyt.FindAsync(id);
             if (depozyt != null)
             {
-                _context.Depozyty.Remove(depozyt);
+                _context.Depozyt.Remove(depozyt);
                 await _context.SaveChangesAsync();
             }
 

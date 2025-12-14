@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace DepozytOpon.Data.Migrations
+namespace DepozytOpon.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251207141745_depozyt")]
-    partial class Depozyt
+    [Migration("20251214082734_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,8 +59,9 @@ namespace DepozytOpon.Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("OponaId")
-                        .HasColumnType("int");
+                    b.Property<string>("OponaId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RejestracjaPojazdu")
                         .IsRequired()
@@ -68,9 +69,7 @@ namespace DepozytOpon.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("OponaId");
-
-                    b.ToTable("Depozyty");
+                    b.ToTable("Depozyt");
                 });
 
             modelBuilder.Entity("DepozytOpon.Models.Opona", b =>
@@ -81,32 +80,25 @@ namespace DepozytOpon.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Bieżnik")
-                        .IsRequired()
+                    b.Property<string>("Bieznik")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KodTowaru")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Producent")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RokProdukcji")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Rozmiar")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sezon")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Typ")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -314,17 +306,6 @@ namespace DepozytOpon.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("DepozytOpon.Models.Depozyt", b =>
-                {
-                    b.HasOne("DepozytOpon.Models.Opona", "Opona")
-                        .WithMany()
-                        .HasForeignKey("OponaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Opona");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

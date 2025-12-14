@@ -18,7 +18,7 @@ namespace DepozytOpon.Services
                 await page.GotoAsync(url, new PageGotoOptions { Timeout = 15000 });
 
                 dto.Typ = await SafeText(page.Locator("div.item:has(div.label:text('Typ')) div.content"), "Typ");
-                dto.Producent = await SafeText(page.Locator("div.name"), "Producent");
+                dto.Producent = await SafeText(page.Locator("div.name .producer"), "Producent");
                 dto.Rozmiar = await SafeText(page.Locator("div.item:has(div.label:text('Rozmiar')) div.content"), "Rozmiar");
                 dto.Bieznik = await SafeText(page.Locator("div.item:has(div.label:text('Bieżnik')) div.content"), "Bieżnik");
                 dto.Sezon = await SafeText(page.Locator("div.item:has(div.label:text('Sezon')) div.content"), "Sezon");

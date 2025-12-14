@@ -2,7 +2,7 @@
 
 <h2>Lista depozytów</h2>
 
-<a class="btn btn-primary mb-3" href="/Depozyty/Dodaj">Dodaj depozyt</a>
+<a class="btn btn-primary mb-3" href="/Depozyt/Dodaj">Dodaj depozyt</a>
 
 <table class="table table-bordered">
     <thead>
@@ -30,7 +30,7 @@
                 <td>@d.NumerBOX</td>
 
                 <td class="text-center">
-                    <img src="@Url.Action("GenerujQR", "Depozyty", new { id = d.Id })"
+                    <img src="@Url.Action("GenerujQR", "Depozyt", new { id = d.Id })"
                          alt="QR Code"
                          style="width: 80px; height: 80px;" />
                 </td>
@@ -44,8 +44,8 @@
                 <td>@d.DataPrzyjecia.ToShortDateString()</td>
                 <td>@d.Notatka</td>
                 <td>
-                    <a class="btn btn-warning btn-sm" href="/Depozyty/Edytuj/@d.Id">Edytuj</a>
-                    <a class="btn btn-danger btn-sm" href="/Depozyty/Usun/@d.Id">Usuń</a>
+                    <a class="btn btn-warning btn-sm" href="/Depozyt/Edytuj/@d.Id">Edytuj</a>
+                    <a class="btn btn-danger btn-sm" href="/Depozyt/Usun/@d.Id">Usuń</a>
 
                 </td>
             </tr>
