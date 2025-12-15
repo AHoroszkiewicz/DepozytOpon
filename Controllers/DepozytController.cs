@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using System;
-// --- NOWE BIBLIOTEKI DO QR ---
+using System.Linq;
 using QRCoder;
-using System.IO;
-// -----------------------------
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 
 namespace DepozytOpon.Controllers
 {
@@ -20,6 +21,9 @@ namespace DepozytOpon.Controllers
         public DepozytController(ApplicationDbContext context)
         {
             _context = context;
+
+            // 🔐 WYMAGANE przez QuestPDF
+            QuestPDF.Settings.License = LicenseType.Community;
         }
 
         // LISTA
@@ -29,36 +33,31 @@ namespace DepozytOpon.Controllers
             return View(lista);
         }
 
-        // DODAWANIE — GET
+        // DODAWANIE
         public IActionResult Dodaj()
         {
             ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru");
             return View();
         }
 
-        // DODAWANIE — POST
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Dodaj(Depozyt depozyt)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-                depozyt.DataPrzyjecia = DateTime.Now;
-                _context.Depozyt.Add(depozyt);
-                await _context.SaveChangesAsync();
-
-                // ZMIANA: Po dodaniu przekieruj do szczegółów, żeby pokazać QR
-                // return RedirectToAction(nameof(Index)); 
-                // Możesz przekierować do akcji np. "Szczegoly", jeśli ją stworzysz, 
-                // ale na razie zostawmy Index, a QR dodasz na liście lub w edycji.
-                return RedirectToAction(nameof(Index));
+                ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
+                return View(depozyt);
             }
 
-            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
-            return View(depozyt);
+            depozyt.DataPrzyjecia = DateTime.Now;
+            _context.Depozyt.Add(depozyt);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(Index));
         }
 
-        // EDYCJA — GET
+        // EDYCJA
         public async Task<IActionResult> Edytuj(int id)
         {
             var depozyt = await _context.Depozyt.FindAsync(id);
@@ -69,23 +68,39 @@ namespace DepozytOpon.Controllers
             return View(depozyt);
         }
 
-        // EDYCJA — POST
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edytuj(Depozyt depozyt)
+        public async Task<IActionResult> Edytuj(int id, Depozyt model)
         {
-            if (ModelState.IsValid)
+            var depozyt = await _context.Depozyt.FindAsync(id);
+            if (depozyt == null)
+                return NotFound();
+
+            if (!ModelState.IsValid)
             {
-                _context.Update(depozyt);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", model.OponaId);
+                return View(model);
             }
 
-            ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
-            return View(depozyt);
+            // 🔒 Aktualizujemy TYLKO dozwolone pola
+            depozyt.NumerBOX = model.NumerBOX;
+            depozyt.ImieNazwisko = model.ImieNazwisko;
+            depozyt.NumerTelefonu = model.NumerTelefonu;
+            depozyt.MarkaPojazdu = model.MarkaPojazdu;
+            depozyt.RejestracjaPojazdu = model.RejestracjaPojazdu;
+            depozyt.OponaId = model.OponaId;
+            depozyt.Ilosc = model.Ilosc;
+            depozyt.Notatka = model.Notatka;
+
+            // ❗ NIE DOTYKAMY:
+            // depozyt.DataPrzyjecia
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
 
-        // USUWANIE — GET
+
+        // USUWANIE
         public async Task<IActionResult> Usun(int id)
         {
             var depozyt = await _context.Depozyt.FindAsync(id);
@@ -95,7 +110,6 @@ namespace DepozytOpon.Controllers
             return View(depozyt);
         }
 
-        // USUWANIE — POST
         [HttpPost, ActionName("UsunPotwierdzenie")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UsunPotwierdzony(int id)
@@ -110,23 +124,122 @@ namespace DepozytOpon.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // --- NOWA METODA: GENEROWANIE KODU QR ---
-        // Wywołujesz ją w HTML jako obrazek
-        public IActionResult GenerujQR(int id)
+        // WSPÓLNY PAYLOAD QR
+        private static string BuildQrPayload(Depozyt d)
         {
-            // Możemy zakodować samo ID, np. "15", albo prefiks np. "DEP-15"
-            string payload = id.ToString();
-
-            using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
-            {
-                QRCodeData qrCodeData = qrGenerator.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
-
-                // PngByteQRCode jest lżejsze i nie wymaga System.Drawing.Common w nowszych .NET
-                PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
-                byte[] qrCodeImage = qrCode.GetGraphic(20);
-
-                return File(qrCodeImage, "image/png");
-            }
+            return
+        $@"BOX:{d.NumerBOX}
+        POJAZD:{d.MarkaPojazdu}
+        REJ:{d.RejestracjaPojazdu}
+        DATA:{d.DataPrzyjecia:yyyy-MM-dd}";
         }
+
+
+        private static byte[] GenerateQrBytes(string payload)
+        {
+            using var gen = new QRCodeGenerator();
+            using var data = gen.CreateQrCode(payload, QRCodeGenerator.ECCLevel.Q);
+            var qr = new PngByteQRCode(data);
+            return qr.GetGraphic(20);
+        }
+
+        // QR NA LIŚCIE (FE)
+        public IActionResult GenerateQR(int id)
+        {
+            var depozyt = _context.Depozyt.FirstOrDefault(d => d.Id == id);
+            if (depozyt == null)
+                return NotFound();
+
+            var payload = BuildQrPayload(depozyt);
+            var qrBytes = GenerateQrBytes(payload);
+
+            return File(qrBytes, "image/png");
+        }
+
+        // PODSUMOWANIE PDF
+        public IActionResult Summary(int id)
+        {
+            var depozyt = _context.Depozyt.FirstOrDefault(d => d.Id == id);
+            if (depozyt == null)
+                return NotFound();
+
+            var payload = BuildQrPayload(depozyt);
+            var qrBytes = GenerateQrBytes(payload);
+
+            var pdf = Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4);
+                    page.Margin(30);
+
+                    page.Content().Column(col =>
+                    {
+                        col.Spacing(10);
+
+                        col.Item().Text("PODSUMOWANIE DEPOZYTU")
+                            .FontSize(20)
+                            .Bold();
+
+                        col.Item().LineHorizontal(1);
+
+                        col.Item().Text($"Numer BOX: {depozyt.NumerBOX}");
+                        col.Item().Text($"Klient: {depozyt.ImieNazwisko}");
+                        col.Item().Text($"Telefon: {depozyt.NumerTelefonu}");
+                        col.Item().Text($"Pojazd: {depozyt.MarkaPojazdu}");
+                        col.Item().Text($"Rejestracja: {depozyt.RejestracjaPojazdu}");
+                        col.Item().Text($"Kod opony: {depozyt.OponaId}");
+                        col.Item().Text($"Ilość: {depozyt.Ilosc}");
+                        col.Item().Text($"Data przyjęcia: {depozyt.DataPrzyjecia:yyyy-MM-dd}");
+
+                        col.Item().PaddingTop(20);
+
+                        col.Item().AlignCenter()
+                        .Image(qrBytes, ImageScaling.FitWidth);
+
+                        col.Item().AlignCenter()
+                            .Text("Kod QR depozytu")
+                            .Italic()
+                            .FontSize(10);
+                    });
+                });
+            }).GeneratePdf();
+
+            return File(
+                pdf,
+                "application/pdf",
+                $"Depozyt_BOX_{depozyt.NumerBOX}.pdf"
+            );
+        }
+
+        [HttpPost]
+        public IActionResult QRSearch(string qr)
+        {
+            if (string.IsNullOrWhiteSpace(qr))
+                return BadRequest();
+
+            // rozbijamy linie QR
+            var lines = qr
+                .Split('\n', StringSplitOptions.RemoveEmptyEntries)
+                .Select(l => l.Trim())
+                .ToList();
+
+            // szukamy linii BOX:
+            var boxLine = lines.FirstOrDefault(l => l.StartsWith("BOX:"));
+            if (boxLine == null)
+                return BadRequest("Brak numeru BOX w QR");
+
+            var boxNumber = boxLine.Replace("BOX:", "").Trim();
+
+            // szukamy depozytu po BOX
+            var depozyt = _context.Depozyt
+                .FirstOrDefault(d => d.NumerBOX == boxNumber);
+
+            if (depozyt == null)
+                return NotFound("Nie odnaleziono depozytu");
+
+            return RedirectToAction("Edytuj", new { id = depozyt.Id });
+        }
+
     }
 }

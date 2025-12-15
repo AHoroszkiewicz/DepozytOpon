@@ -2,6 +2,7 @@ using DepozytOpon.Data;
 using DepozytOpon.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using QuestPDF.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<TireScraperService>();
+QuestPDF.Settings.License = LicenseType.Community;
+
+
 
 var app = builder.Build();
 

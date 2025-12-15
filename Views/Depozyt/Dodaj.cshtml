@@ -30,18 +30,10 @@
 
     <div class="mb-3">
         <label>Opona</label>
-        <select class="form-control" name="OponaId">
-            @if (ViewBag.Opony != null)
-            {
-                @foreach (var o in (SelectList)ViewBag.Opony)
-                {
-                    <option value="@o.Value">@o.Text</option>
-                }
-            }
-            else
-            {
-                <option disabled>Brak opon w bazie</option>
-            }
+        <select asp-for="OponaId"
+                asp-items="ViewBag.Opony"
+                class="form-control">
+            <option value=""> </option>
         </select>
     </div>
 

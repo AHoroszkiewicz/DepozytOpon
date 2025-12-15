@@ -3,13 +3,17 @@
 <h2>Lista depozytów</h2>
 
 <a class="btn btn-primary mb-3" href="/Depozyt/Dodaj">Dodaj depozyt</a>
+<button class="btn btn-success mb-3"
+        data-bs-toggle="modal"
+        data-bs-target="#qrModal">
+    📷 Wyszukaj po QR
+</button>
+
 
 <table class="table table-bordered">
     <thead>
         <tr>
-            <th>Numer depozytu</th>
             <th>Numer BOX</th>
-            <th>Kod QR</th>
             <th>Imię i nazwisko</th>
             <th>Telefon</th>
             <th>Marka Pojazdu</th>
@@ -26,15 +30,7 @@
         @foreach (var d in Model)
         {
             <tr>
-                <td>@d.Id</td>
                 <td>@d.NumerBOX</td>
-
-                <td class="text-center">
-                    <img src="@Url.Action("GenerujQR", "Depozyt", new { id = d.Id })"
-                         alt="QR Code"
-                         style="width: 80px; height: 80px;" />
-                </td>
-
                 <td>@d.ImieNazwisko</td>
                 <td>@d.NumerTelefonu</td>
                 <td>@d.MarkaPojazdu</td>
@@ -45,6 +41,11 @@
                 <td>@d.Notatka</td>
                 <td>
                     <a class="btn btn-warning btn-sm" href="/Depozyt/Edytuj/@d.Id">Edytuj</a>
+                    <a class="btn btn-info btn-sm"
+                       target="_blank"
+                       href="@Url.Action("Summary", "Depozyt", new { id = d.Id })">
+                        Podsumowanie
+                    </a>
                     <a class="btn btn-danger btn-sm" href="/Depozyt/Usun/@d.Id">Usuń</a>
 
                 </td>
@@ -52,3 +53,58 @@
         }
     </tbody>
 </table>
+<script src="https://unpkg.com/html5-qrcode"></script>
+<div class="modal fade" id="qrModal" tabindex="-1">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Skanuj kod QR</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div id="qr-reader" style="width:100%"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    let qrScanner;
+
+    document.getElementById('qrModal')
+        .addEventListener('shown.bs.modal', () => {
+
+        qrScanner = new Html5Qrcode("qr-reader");
+
+        qrScanner.start(
+            { facingMode: "environment" },
+            { fps: 10, qrbox: 250 },
+            qrText => {
+                qrScanner.stop();
+
+                fetch('/Depozyt/QRSearch', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: 'qr=' + encodeURIComponent(qrText)
+                })
+                .then(r => {
+                    if (r.redirected) {
+                        window.location.href = r.url;
+                    } else {
+                        alert("Nie znaleziono depozytu");
+                    }
+                });
+            }
+        );
+    });
+
+    document.getElementById('qrModal')
+        .addEventListener('hidden.bs.modal', () => {
+            if (qrScanner)
+                qrScanner.stop();
+    });
+</script>

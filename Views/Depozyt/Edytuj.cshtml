@@ -32,21 +32,13 @@
 
     <div class="mb-3">
         <label>Opona</label>
-        <select class="form-control" name="OponaId">
-            @if (ViewBag.Opony != null)
-            {
-                @foreach (var o in (SelectList)ViewBag.Opony)
-                {
-                    <option value="@o.Value">@o.Text</option>
-                }
-            }
-            else
-            {
-                <option disabled>Brak opon w bazie</option>
-            }
+        <select asp-for="OponaId"
+                asp-items="ViewBag.Opony"
+                class="form-control">
+            <option value=""> </option>
         </select>
     </div>
-
+    e
     <div class="mb-3">
         <label>Ilość</label>
         <input type="number" class="form-control" name="Ilosc" value="@Model.Ilosc" />
@@ -57,5 +49,6 @@
         <textarea class="form-control" name="Notatka">@Model.Notatka</textarea>
     </div>
 
-    <button class="btn btn-success">Zapisz</button>
+    <button type="submit" class="btn btn-primary mt-3">Zapisz</button>
+    <a asp-action="Index" asp-controller="Depozyt" class="btn btn-secondary mt-3">Wstecz</a>
 </form>
