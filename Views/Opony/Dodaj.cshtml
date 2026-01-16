@@ -39,6 +39,7 @@
     <div class="form-group">
         <label>Kod towaru</label>
         <input class="form-control" asp-for="KodTowaru" />
+        <span asp-validation-for="KodTowaru" class="text-danger"></span>
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Zapisz</button>
@@ -71,6 +72,9 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
 <script>
     function showAlert(type, message) {
         const alert = document.getElementById("scrapeAlert");
@@ -128,5 +132,6 @@
         });
     }
 </script>
+
 
 

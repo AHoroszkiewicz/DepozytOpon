@@ -14,6 +14,6 @@ namespace DepozytOpon.Models
         public string? Sezon { get; set; }
         public string? RokProdukcji { get; set; }
         [Required(ErrorMessage = "Kod Opony jest wymagany")]
-        public string KodTowaru { get; set; } = null!;
+        public string KodTowaru { get; set; }
     }
 }

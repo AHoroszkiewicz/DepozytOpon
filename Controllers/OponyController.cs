@@ -3,7 +3,7 @@ using DepozytOpon.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
+using System.Threading.Tasks;
 
 namespace DepozytOpon.Controllers
 {
@@ -24,28 +24,50 @@ namespace DepozytOpon.Controllers
             return View(opony);
         }
 
-        // DODAWANIE — GET
+        // =======================
+        // DODAWANIE
+        // =======================
+
+        // GET
         public IActionResult Dodaj()
         {
             return View();
         }
 
-        // DODAWANIE — POST
+        // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Dodaj(Opona opona)
         {
-            if (ModelState.IsValid)
+            // 🔎 walidacja unikalności KodTowaru
+            bool kodIstnieje = await _context.Opony
+                .AnyAsync(o => o.KodTowaru == opona.KodTowaru);
+
+            if (kodIstnieje)
             {
-                _context.Opony.Add(opona);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError(
+                    nameof(opona.KodTowaru),
+                    "Opona o podanym kodzie towaru już istnieje."
+                );
             }
 
-            return View(opona);
+            if (!ModelState.IsValid)
+                return View(opona);
+
+            _context.Opony.Add(opona);
+            await _context.SaveChangesAsync();
+
+            TempData["ModalMessage"] = "Opona została pomyślnie dodana.";
+            TempData["ModalType"] = "success";
+
+            return RedirectToAction(nameof(Index));
         }
 
-        // EDYCJA — GET
+        // =======================
+        // EDYCJA
+        // =======================
+
+        // GET
         public async Task<IActionResult> Edytuj(int id)
         {
             var opona = await _context.Opony.FindAsync(id);
@@ -55,22 +77,40 @@ namespace DepozytOpon.Controllers
             return View(opona);
         }
 
-        // EDYCJA — POST
+        // POST
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edytuj(Opona opona)
         {
-            if (ModelState.IsValid)
+            // 🔎 walidacja unikalności KodTowaru (pomijamy edytowany rekord)
+            bool kodIstnieje = await _context.Opony
+                .AnyAsync(o => o.KodTowaru == opona.KodTowaru && o.Id != opona.Id);
+
+            if (kodIstnieje)
             {
-                _context.Update(opona);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ModelState.AddModelError(
+                    nameof(opona.KodTowaru),
+                    "Inna opona posiada już ten kod towaru."
+                );
             }
 
-            return View(opona);
+            if (!ModelState.IsValid)
+                return View(opona);
+
+            _context.Update(opona);
+            await _context.SaveChangesAsync();
+
+            TempData["ModalMessage"] = "Opona została zaktualizowana.";
+            TempData["ModalType"] = "success";
+
+            return RedirectToAction(nameof(Index));
         }
 
-        // USUWANIE — GET (potwierdzenie)
+        // =======================
+        // USUWANIE
+        // =======================
+
+        // GET (potwierdzenie)
         public async Task<IActionResult> Usun(int id)
         {
             var opona = await _context.Opony.FindAsync(id);
@@ -80,7 +120,7 @@ namespace DepozytOpon.Controllers
             return View(opona);
         }
 
-        // USUWANIE — POST
+        // POST
         [HttpPost, ActionName("UsunPotwierdzenie")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UsunPotwierdzony(int id)
@@ -90,6 +130,9 @@ namespace DepozytOpon.Controllers
             {
                 _context.Opony.Remove(opona);
                 await _context.SaveChangesAsync();
+
+                TempData["ModalMessage"] = "Opona została usunięta.";
+                TempData["ModalType"] = "success";
             }
 
             return RedirectToAction(nameof(Index));

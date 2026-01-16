@@ -37,6 +37,10 @@ namespace DepozytOpon.Data
                 .HasIndex(d => d.NumerBOX)
                 .IsUnique();
 
+            modelBuilder.Entity<Opona>()
+               .HasIndex(d => d.KodTowaru)
+               .IsUnique();
+
 
         }
 
