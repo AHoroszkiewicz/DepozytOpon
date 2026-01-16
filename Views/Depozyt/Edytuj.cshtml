@@ -3,52 +3,57 @@
 <h2>Edytuj depozyt</h2>
 
 <form method="post">
-    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" asp-for="Id" />
 
     <div class="mb-3">
-        <label>Numer BOX</label>
-        <input class="form-control" name="NumerBOX" value="@Model.NumerBOX" />
+        <label asp-for="NumerBOX" class="form-label"></label>
+        <input asp-for="NumerBOX" class="form-control" />
+        <span asp-validation-for="NumerBOX" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label>Imię i nazwisko</label>
-        <input class="form-control" name="ImieNazwisko" value="@Model.ImieNazwisko" />
+        <label asp-for="ImieNazwisko" class="form-label"></label>
+        <input asp-for="ImieNazwisko" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Numer telefonu</label>
-        <input class="form-control" name="NumerTelefonu" value="@Model.NumerTelefonu" />
+        <label asp-for="NumerTelefonu" class="form-label"></label>
+        <input asp-for="NumerTelefonu" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Marka pojazdu</label>
-        <input class="form-control" name="MarkaPojazdu" value="@Model.MarkaPojazdu" />
+        <label asp-for="MarkaPojazdu" class="form-label"></label>
+        <input asp-for="MarkaPojazdu" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Rejestracja pojazdu</label>
-        <input class="form-control" name="RejestracjaPojazdu" value="@Model.RejestracjaPojazdu" />
+        <label asp-for="RejestracjaPojazdu" class="form-label"></label>
+        <input asp-for="RejestracjaPojazdu" class="form-control" />
     </div>
 
     <div class="mb-3">
-        <label>Opona</label>
+        <label asp-for="OponaId" class="form-label"></label>
         <select asp-for="OponaId"
                 asp-items="ViewBag.Opony"
                 class="form-control">
-            <option value=""> </option>
+            <option value="">Kod produktu</option>
         </select>
-    </div>
-    e
-    <div class="mb-3">
-        <label>Ilość</label>
-        <input type="number" class="form-control" name="Ilosc" value="@Model.Ilosc" />
     </div>
 
     <div class="mb-3">
-        <label>Notatka</label>
-        <textarea class="form-control" name="Notatka">@Model.Notatka</textarea>
+        <label asp-for="Ilosc" class="form-label"></label>
+        <input asp-for="Ilosc" type="number" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Notatka" class="form-label"></label>
+        <textarea asp-for="Notatka" class="form-control"></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary mt-3">Zapisz</button>
     <a asp-action="Index" asp-controller="Depozyt" class="btn btn-secondary mt-3">Wstecz</a>
 </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+

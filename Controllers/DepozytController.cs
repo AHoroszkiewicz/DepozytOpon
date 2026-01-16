@@ -44,20 +44,37 @@ namespace DepozytOpon.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Dodaj(Depozyt depozyt)
         {
+            // WALIDACJA UNIKALNOŚCI NumerBOX
+            if (_context.Depozyt.Any(d => d.NumerBOX == depozyt.NumerBOX))
+            {
+                ModelState.AddModelError(
+                    nameof(depozyt.NumerBOX),
+                    "Depozyt o podanym numerze BOX już istnieje"
+                );
+            }
+
             if (!ModelState.IsValid)
             {
-                ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", depozyt.OponaId);
+                ViewBag.Opony = new SelectList(
+                    _context.Opony,
+                    "KodTowaru",
+                    "KodTowaru",
+                    depozyt.OponaId
+                );
                 return View(depozyt);
             }
 
             depozyt.DataPrzyjecia = DateTime.Now;
+            depozyt.UtworzonoPrzez = User.Identity.Name;
+
             _context.Depozyt.Add(depozyt);
             await _context.SaveChangesAsync();
 
             return RedirectToAction(nameof(Index));
         }
 
-        // EDYCJA
+
+        // GET: Depozyt/Edytuj/5
         public async Task<IActionResult> Edytuj(int id)
         {
             var depozyt = await _context.Depozyt.FindAsync(id);
@@ -70,34 +87,59 @@ namespace DepozytOpon.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edytuj(int id, Depozyt model)
+        public async Task<IActionResult> Edytuj(int id, Depozyt depozytEdytowany)
         {
             var depozyt = await _context.Depozyt.FindAsync(id);
             if (depozyt == null)
                 return NotFound();
 
-            if (!ModelState.IsValid)
+            // 🔎 WALIDACJA UNIKALNOŚCI NumerBOX (z pominięciem bieżącego rekordu)
+            bool numerBoxIstnieje = await _context.Depozyt
+                .AnyAsync(d => d.NumerBOX == depozytEdytowany.NumerBOX && d.Id != id);
+
+            if (numerBoxIstnieje)
             {
-                ViewBag.Opony = new SelectList(_context.Opony, "KodTowaru", "KodTowaru", model.OponaId);
-                return View(model);
+                ModelState.AddModelError(
+                    nameof(depozytEdytowany.NumerBOX),
+                    "Depozyt o podanym numerze BOX już istnieje"
+                );
             }
 
-            // 🔒 Aktualizujemy TYLKO dozwolone pola
-            depozyt.NumerBOX = model.NumerBOX;
-            depozyt.ImieNazwisko = model.ImieNazwisko;
-            depozyt.NumerTelefonu = model.NumerTelefonu;
-            depozyt.MarkaPojazdu = model.MarkaPojazdu;
-            depozyt.RejestracjaPojazdu = model.RejestracjaPojazdu;
-            depozyt.OponaId = model.OponaId;
-            depozyt.Ilosc = model.Ilosc;
-            depozyt.Notatka = model.Notatka;
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Opony = new SelectList(
+                    _context.Opony,
+                    "KodTowaru",
+                    "KodTowaru",
+                    depozytEdytowany.OponaId
+                );
 
-            // ❗ NIE DOTYKAMY:
-            // depozyt.DataPrzyjecia
+                return View(depozytEdytowany);
+            }
+
+            // ✏️ Kopiujemy tylko dozwolone pola
+            depozyt.NumerBOX = depozytEdytowany.NumerBOX;
+            depozyt.ImieNazwisko = depozytEdytowany.ImieNazwisko;
+            depozyt.NumerTelefonu = depozytEdytowany.NumerTelefonu;
+            depozyt.MarkaPojazdu = depozytEdytowany.MarkaPojazdu;
+            depozyt.RejestracjaPojazdu = depozytEdytowany.RejestracjaPojazdu;
+            depozyt.OponaId = depozytEdytowany.OponaId;
+            depozyt.Ilosc = depozytEdytowany.Ilosc;
+            depozyt.Notatka = depozytEdytowany.Notatka;
+
+            // 🧾 Audyt
+            depozyt.EdytowanoPrzez = User.Identity?.Name;
+            depozyt.DataEdycji = DateTime.Now;
 
             await _context.SaveChangesAsync();
+
+            // ✅ MODAL SUKCESU
+            TempData["ModalMessage"] = "Depozyt został pomyślnie edytowany.";
+            TempData["ModalType"] = "success";
+
             return RedirectToAction(nameof(Index));
         }
+
 
 
         // USUWANIE
@@ -119,9 +161,13 @@ namespace DepozytOpon.Controllers
             {
                 _context.Depozyt.Remove(depozyt);
                 await _context.SaveChangesAsync();
+
+                TempData["ModalMessage"] = "Depozyt został usunięty.";
+                TempData["ModalType"] = "danger";
             }
 
             return RedirectToAction(nameof(Index));
+
         }
 
         // WSPÓLNY PAYLOAD QR

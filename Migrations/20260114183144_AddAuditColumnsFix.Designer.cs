@@ -4,6 +4,7 @@ using DepozytOpon.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DepozytOpon.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260114183144_AddAuditColumnsFix")]
+    partial class AddAuditColumnsFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -52,8 +55,7 @@ namespace DepozytOpon.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumerBOX")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NumerTelefonu")
                         .HasColumnType("nvarchar(max)");
@@ -69,14 +71,13 @@ namespace DepozytOpon.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("NumerBOX")
-                        .IsUnique();
-
                     b.ToTable("Depozyt", t =>
                         {
                             t.HasTrigger("TR_Depozyt_Delete");
 
                             t.HasTrigger("TR_Depozyt_Insert");
+
+                            t.HasTrigger("TR_Depozyt_Update");
                         });
 
                     b.HasAnnotation("SqlServer:UseSqlOutputClause", false);
@@ -94,7 +95,6 @@ namespace DepozytOpon.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KodTowaru")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Producent")
